@@ -1,0 +1,99 @@
+/* Helpers */
+.loader {
+	position: fixed;
+	margin: auto auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10000;
+}
+
+.c-primary {
+	color: #7E0CF5 !important;
+}
+
+.b-primary {
+	background-color: #7E0CF5 !important;
+	color: white;
+}
+
+.middle {
+	vertical-align: middle !important;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+::-webkit-scrollbar {
+	width: 0 !important;
+}
+
+.d-flex {
+	display: flex !important;
+}
+
+.justify-content-start {
+	justify-content: flex-start !important;
+}
+
+.justify-content-end {
+	justify-content: flex-end !important;
+}
+
+.justify-content-center {
+	justify-content: center !important;
+}
+
+.justify-content-between {
+	justify-content: space-between !important;
+}
+
+.justify-content-around {
+	justify-content: space-around !important;
+}
+
+.align-items-start {
+	justify-content: flex-start !important;
+}
+
+.align-items-end {
+	justify-content: flex-end !important;
+}
+
+.align-items-center {
+	justify-content: center !important;
+}
+
+.justify-content-between {
+	justify-content: space-between !important;
+}
+
+.justify-content-around {
+	justify-content: space-around !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container-fluid {
+	display: none;
+}
+
+.bor {
+	border: 1px solid;
+}
