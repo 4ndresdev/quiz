@@ -14,4 +14,19 @@ class C_home extends CI_Controller
 	{
 		$this->load->view('quiz');
 	}
+
+	public function post()
+	{
+
+		if ($this->post->is_ajax_request()) {
+
+			//data process
+			
+
+		} else {
+
+			http_response_code(404);
+
+		}
+	}
 }

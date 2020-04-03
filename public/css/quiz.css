@@ -1,3 +1,7 @@
+.bor {
+	border: 1px solid !important;
+}
+
 body {
 	background-color: #e3e7f1 !important;
 }
@@ -8,7 +12,18 @@ nav {
 }
 
 .logo-container {
-	margin-left: 20px;
+	list-style: none;
+}
+
+.logo-container ul {
+	list-style: none;
+}
+
+.storage-name {
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	cursor: pointer;
 }
 
 .logo {
@@ -35,6 +50,14 @@ nav {
 	margin: 0 0 0 10px !important;
 }
 
+.card-btn-error:active {
+	transform: scale(0.9, 0.9);
+}
+
+.card-btn-success:active {
+	transform: scale(0.9, 0.9);
+}
+
 .hide {
 	display: none !important;
 }
@@ -45,4 +68,56 @@ nav {
 
 .container-finish {
 	display: none;
+}
+
+.menu {
+	padding: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.menu .submenu {
+	width: 150px;
+	height: auto;
+	position: absolute;
+	background-color: white;
+	color: black;
+	z-index: 1000;
+	padding: 5px 10px !important;
+	display: none;
+}
+
+.menu .submenu li {
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.menu .submenu li:hover {
+	background-color: gainsboro;
+}
+
+.storage-name:hover~.submenu {
+	display: block !important;
+	animation-name: animate;
+	animation-duration: 0.3s;
+}
+
+.submenu:hover {
+	display: block;
+	animation-name: animate;
+	animation-duration: 0.3s;
+}
+
+@keyframes animate {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

@@ -12,6 +12,7 @@
     <link href="<?= base_url('css/app.min.1.css') ?>" rel="stylesheet">
     <link href="<?= base_url('css/app.min.2.css') ?>" rel="stylesheet">
     <link href="<?= base_url('css/quiz.css') ?>" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,13 +26,14 @@
         <!-- Nav -->
         <nav class="p-10 bgm-white z-depth-1">
             <div class="logo-container">
-                <img class="logo di-block" src="https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=2846955712063145&height=50&width=50&ext=1587240740&hash=AeT7hpMs9S6oMtfM" alt="Perfil">
-                <div class="dropdown di-block m-l-15">
-                    <p class="waves-effect middle di-block storage-name m-0 f-18 bold" data-toggle="dropdown" aria-expanded="false"></p>
-                    <ul class="dropdown-menu">
-                        <li class="logout"><a href="#">Logout</a></li>
+                <img class="logo di-block p-0" src="https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=2846955712063145&height=50&width=50&ext=1587240740&hash=AeT7hpMs9S6oMtfM" alt="Perfil">
+                <ul class="menu di-block p-0 m-l-15">
+                    <p class="storage-name m-0"></p>
+                    <ul class="submenu p-0 z-depth-1">
+                        <li class="logout">Cerrar sesión</li>
                     </ul>
-                </div>
+                </ul>
+
             </div>
         </nav>
 
@@ -73,13 +75,13 @@
                                     <p>3</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿No te consideras un soñador?</h1>
+                                    <h1>¿Te consideras un soñador?</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div data-next-card="final" data-id="4" class="hide question-4 row d-flex justify-content-center">
+                <div data-next-card=".question-5" data-id="4" class="hide question-4 row d-flex justify-content-center">
                     <div class="col-md-10 col-sm-10 col-xs-12">
                         <div class="card brd-2">
                             <div class="card-body card-padding">
@@ -93,7 +95,177 @@
                         </div>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
+                <div data-next-card=".question-6" data-id="5" class="hide question-5 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>5</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Consideras que la lógica generalmente es más importante que el corazón cuando se trata de tomar decisiones importantes?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-7" data-id="6" class="hide question-6 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>6</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Es muy raro que te dejes llevar por fantasías o ideas?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-8" data-id="7" class="hide question-7 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>7</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Tus sueños tienden a concentrarse en el mundo real y sus acontecimientos?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-9" data-id="8" class="hide question-8 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>8</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Si tuvieras un negocio te costaría mucho despedir a empleados que son leales aunque su rendimiento estuviera por debajo de lo esperado?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-10" data-id="9" class="hide question-9 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>9</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Te resulta difícil presentarte a ti mismo ante otras personas?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-11" data-id="10" class="hide question-10 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>10</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Normalmente no sueles iniciar las conversaciones?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-12" data-id="11" class="hide question-11 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>11</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿No te importa ni te incomoda ser el centro de atención?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-13" data-id="12" class="hide question-12 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>12</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿No te lleva mucho tiempo comenzar a implicarte en actividades sociales en tu nuevo entorno de trabajo?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-14" data-id="13" class="hide question-13 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>13</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Prefieres improvisar a tener que dedicar tiempo a desarrollar un plan detallado?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-15" data-id="14" class="hide question-14 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>14</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Disponer de todas tus opciones es más importante que tener una lista preestablecida de cosas que hacer?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card=".question-16" data-id="15" class="hide question-15 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>15</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿No tienes dificultades para diseñar una agenda personal de actividades y adherirte a ella?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-next-card="final" data-id="16" class="hide question-16 row d-flex justify-content-center">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="card brd-2">
+                            <div class="card-body card-padding">
+                                <div class="number-card">
+                                    <p>16</p>
+                                </div>
+                                <div class="m-t-30">
+                                    <h1>¿Tienes una tendencia a posponer cosas hasta que no queda tiempo suficiente para hacer todo lo que tienes que hacer?</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row d-flex justify-content-center container-buttons">
                     <div class="col-md-5 col-sm-5 col-xs-5">
                         <div class="card card-btn-error brd-2">
                             <div class="card-body card-padding d-flex justify-content-center align-items-center">
@@ -128,7 +300,7 @@
                                     <p class="f-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dignissimos esse unde, amet, fuga eius modi praesentium maiores ipsum hic error, veniam at ad consequuntur rerum eveniet debitis accusantium mollitia?</p>
                                 </div>
                                 <div class="p-20 text-center">
-                                    <a class="btn-share" href="#">Compartir en facebook <i class="zmdi zmdi-arrow-right zmdi-hc-fw"></i> </a>
+                                    <a href="whatsapp://send?text=Añade%20en%20tu%20web%20un%20botón%20para%20compartir%20en%20Whatsapp%20https://antoniorull.com/boton-compartir-whatsapp/?utm_source=whatsapp">Compartir en whatsapp <i class="zmdi zmdi-arrow-right zmdi-hc-fw"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -155,11 +327,23 @@
             let url = '<?= base_url() ?>';
             let objeto = [];
 
-            $('.storage-name').text(localStorage.getItem('name'));
+            $('.storage-name').html(localStorage.getItem('name') + '<i class="zmdi zmdi-chevron-down zmdi-hc-fw"></i>');
             $('.logo').attr('src', localStorage.getItem('img_perfil'));
 
 
+            $('.logout').click(function() {
+
+                FB.getLoginStatus(function(response) {
+                    if (response && response.status === 'connected') {
+                        FB.logout();
+                        window.location.href = url;
+                    }
+                });
+            });
+
+
             window.fbAsyncInit = function() {
+
                 FB.init({
                     appId: '1118991965133339',
                     cookie: true, // Enable cookies to allow the server to access the session.
@@ -168,7 +352,6 @@
                 });
 
             };
-
 
             (function(d, s, id) { // Load the SDK asynchronously
                 var js, fjs = d.getElementsByTagName(s)[0];
@@ -179,11 +362,6 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
 
-
-
-            $('.logout').click(function() {
-                window.location.href = url;
-            });
 
 
             $('.container-fluid').fadeIn('slow');
@@ -201,6 +379,7 @@
                     $('.show').find('.card').css('background-color', '#E24C4B');
                     $('.show').find('p').css('color', 'white');
                     $('.show').find('h1').css('color', 'white');
+                    $('.container-buttons').addClass('hide');
 
                     setTimeout(() => {
 
@@ -210,6 +389,7 @@
                         //Open next card
                         $(clase).addClass('show');
                         $(clase).removeClass('hide');
+                        $('.container-buttons').removeClass('hide');
 
                         let json = {
                             'id_question': id_question,
@@ -218,6 +398,7 @@
 
                         objeto.push(json);
                         json = {};
+
 
 
                     }, 1000);
@@ -262,7 +443,7 @@
                     $('.show').find('.card').css('background-color', '#A4D166');
                     $('.show').find('p').css('color', 'white');
                     $('.show').find('h1').css('color', 'white');
-
+                    $('.container-buttons').addClass('hide');
 
 
                     setTimeout(() => {
@@ -273,6 +454,8 @@
                         //Open next card
                         $(clase).addClass('show');
                         $(clase).removeClass('hide');
+                        $('.container-buttons').removeClass('hide');
+
 
                         let json = {
                             'id_question': id_question,
@@ -281,6 +464,8 @@
 
                         objeto.push(json);
                         json = {};
+
+
 
                     }, 1000);
 

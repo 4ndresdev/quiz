@@ -283,12 +283,10 @@
 					},
 					function(response) {
 						if (response && !response.error) {
-							console.log(response);
 
 							localStorage.setItem('user_id', response.id);
 							localStorage.setItem('img_perfil', response.picture.data.url);
 							localStorage.setItem('name', response.name);
-							localStorage.setItem('email', response.email);
 
 							//Into app
 							window.location.href = url + 'C_home/quiz';
