@@ -219,7 +219,6 @@
 					$('.cicle-subir').removeClass('bounceIn');
 					$('.cicle-subir').hide();
 				}
-
 			});
 
 			$('.cicle-subir').click(function() {
@@ -247,7 +246,6 @@
 				}
 			}
 
-
 			function checkLoginState() { // Called when a person is finished with the Login Button.
 				FB.getLoginStatus(function(response) { // See the onlogin handler						
 					statusChangeCallback(response);
@@ -257,7 +255,7 @@
 
 			window.fbAsyncInit = function() {
 				FB.init({
-					appId: '1118991965133339',
+					appId: '794359310972170',
 					cookie: true, // Enable cookies to allow the server to access the session.
 					xfbml: true, // Parse social plugins on this webpage.
 					version: 'v6.0' // Use this Graph API version for this call.
@@ -287,7 +285,7 @@
 							localStorage.setItem('user_id', response.id);
 							localStorage.setItem('img_perfil', response.picture.data.url);
 							localStorage.setItem('name', response.name);
-
+							localStorage.setItem('email', response.email);
 							//Into app
 							window.location.href = url + 'C_home/quiz';
 
