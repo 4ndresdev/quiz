@@ -2,6 +2,16 @@
 <html lang="es">
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76037200-4"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-76037200-4');
+	</script>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Quiz</title>
@@ -73,10 +83,7 @@
 			<h1 class="bold">¿Qué tipo de personalidad eres? </h1>
 			<div class="under-line"></div>
 		</div>
-
-
 		<section class="section-personalities p-30">
-
 			<!-- Figura 1 -->
 			<img class="figura-1" src="<?= base_url('media/figura-1.svg') ?>" alt="Figura 1">
 
@@ -85,11 +92,9 @@
 					<div class="card z-depth-1">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
-								<img src="<?= base_url('media/iconos/estrovertido.svg') ?>" width="100px" alt="Extrovertido">
+								<img src="<?= base_url('media/archetype/Arquitecto.svg') ?>" width="100px" alt="arquitecto">
 							</div>
-							<p class="bold m-t-25">Extrovertido</p>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste consequuntur.</p>
-
+							<p class="bold m-t-25">Arquitecto</p>
 						</div>
 					</div>
 				</div>
@@ -97,11 +102,9 @@
 					<div class="card z-depth-1">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
-								<img src="<?= base_url('media/iconos/estrovertido.svg') ?>" width="100px" alt="Extrovertido">
+								<img src="<?= base_url('media/archetype/Pensador.svg') ?>" width="100px" alt="pensador">
 							</div>
-							<p class="bold m-t-25">Extrovertido</p>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste consequuntur.</p>
-
+							<p class="bold m-t-25">Pensador</p>
 						</div>
 					</div>
 				</div>
@@ -112,23 +115,20 @@
 					<div class="card z-depth-1">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
-								<img src="<?= base_url('media/iconos/estrovertido.svg') ?>" width="100px" alt="Extrovertido">
+								<img src="<?= base_url('media/archetype/Comandante.svg') ?>" width="100px" alt="comandante">
 							</div>
-							<p class="bold m-t-25">Extrovertido</p>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste consequuntur.</p>
-
+							<p class="bold m-t-25">Comandante</p>
 						</div>
 					</div>
 				</div>
+
 				<div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="card z-depth-1">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
-								<img src="<?= base_url('media/iconos/estrovertido.svg') ?>" width="100px" alt="Extrovertido">
+								<img src="<?= base_url('media/archetype/Polémico.svg') ?>" width="100px" alt="polemico">
 							</div>
-							<p class="bold m-t-25">Extrovertido</p>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste consequuntur.</p>
-
+							<p class="bold m-t-25">Polemico</p>
 						</div>
 					</div>
 				</div>
@@ -139,11 +139,9 @@
 					<div class="card z-depth-1">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
-								<img src="<?= base_url('media/iconos/pensamiento.svg') ?>" width="82px" alt="Extrovertido">
+								<img src="<?= base_url('media/archetype/Abogado.svg') ?>" width="82px" alt="pensador">
 							</div>
-							<p class="bold m-t-25">Pensamiento</p>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste consequuntur.</p>
-
+							<p class="bold m-t-25">Abogado</p>
 						</div>
 					</div>
 				</div>
@@ -151,15 +149,124 @@
 					<div class="card z-depth-1">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
-								<img src="<?= base_url('media/iconos/estrovertido.svg') ?>" width="100px" alt="Extrovertido">
+								<img src="<?= base_url('media/archetype/Mediador.svg') ?>" width="100px" alt="mediador">
 							</div>
-							<p class="bold m-t-25">Extrovertido</p>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste consequuntur.</p>
-
+							<p class="bold m-t-25">Mediador</p>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Bondadoso.svg') ?>" width="100px" alt="bondadoso">
+							</div>
+							<p class="bold m-t-25">Bondadoso</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Campeón.svg') ?>" width="100px" alt="campeon">
+							</div>
+							<p class="bold m-t-25">Campeón</p>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Protector.svg') ?>" width="100px" alt="protector">
+							</div>
+							<p class="bold m-t-25">Protector</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Director.svg') ?>" width="100px" alt="director">
+							</div>
+							<p class="bold m-t-25">Director</p>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Cuidador.svg') ?>" width="100px" alt="dador">
+							</div>
+							<p class="bold m-t-25">Cuidador</p>
+						</div>
+					</div>
+				</div> 
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Artesano.svg') ?>" width="100px" alt="artesano">
+							</div>
+							<p class="bold m-t-25">Artesano</p>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Artista.svg') ?>" width="100px" alt="artista">
+							</div>
+							<p class="bold m-t-25">Artista</p>
+						</div>
+					</div>
+				</div> 
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Inspector.svg') ?>" width="100px" alt="inspector">
+							</div>
+							<p class="bold m-t-25">Inspector</Inp></p>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Persuador.svg') ?>" width="100px" alt="persuador">
+							</div>
+							<p class="bold m-t-25">Persuador</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="card z-depth-1">
+						<div class="card-body card-padding">
+							<div class="w-100 d-flex justify-content-center">
+								<img src="<?= base_url('media/archetype/Ejecutor.svg') ?>" width="100px" alt="Ejecutors">
+							</div>
+							<p class="bold m-t-25">Ejecutor</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 		</section>
 
 

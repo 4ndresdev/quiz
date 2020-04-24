@@ -52,6 +52,7 @@ nav {
 
 .card-btn-error:active {
 	transform: scale(0.9, 0.9);
+	width: 15px;
 }
 
 .card-btn-success:active {

@@ -57,8 +57,6 @@ class C_home extends CI_Controller
 			if ($T > $F) {$profile .= 'T';} else {$profile .= 'F';}
 			if ($J > $P) {$profile .= 'J';} else {$profile .= 'P';}
 
-			//return $this->model->archetipe->get($profile);
-
 			$personaje = $this->db->get_where('cat_archetype', ['archetype'=> $profile ])->row();
 
 			$p_a = [

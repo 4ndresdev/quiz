@@ -88,7 +88,7 @@
                                     <p>4</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿Con frecuencia te resulta facil entender los sentimientos de otras personas?</h1>
+                                    <h1>¿Con frecuencia te resulta fácil entender los sentimientos de otras personas?</h1>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                                     <p>5</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿Con frecuencia te resulta facil entender los sentimientos de otras personas?</h1>
+                                    <h1>¿Es mejor no recibir ninguna sorpresa que recibir sorpresas, ya sean buenas o malas?</h1>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                     <p>6</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿Consideras que la lógica generalmente es más importante que el corazón cuando se trata de tomar decisiones importantes?</h1>
+                                    <h1>¿Consideras que la lógica generalmente es más importante que el corazón, cuando se trata de tomar decisiones importantes?</h1>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +172,7 @@
                                     <p>10</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿Si tuvieras un negocio te costaría mucho despedir a empleados que son leales aunque su rendimiento estuviera por debajo de lo esperado?</h1>
+                                    <h1>¿Es facil que usted se sienta involucrado(a) al ver telenovelas, peliculas o series de televisión?</h1>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +186,8 @@
                                     <p>11</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿Te resulta difícil presentarte a ti mismo ante otras personas?</h1>
+                                    <!--te resulta dificil presentarte con otras personas?-->
+                                    <h1>¿Te resulta difícil presentarte con otras personas?</h1>
                                 </div>
                             </div>
                         </div>
@@ -228,6 +229,7 @@
                                     <p>14</p>
                                 </div>
                                 <div class="m-t-30">
+                                <!--omitir el no-->
                                     <h1>¿No te lleva mucho tiempo comenzar a implicarte en actividades sociales en tu nuevo entorno de trabajo?</h1>
                                 </div>
                             </div>
@@ -242,12 +244,14 @@
                                     <p>15</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿No te lleva mucho tiempo comenzar a implicarte en actividades sociales en tu nuevo entorno de trabajo?</h1>
+                                    <h1>¿Usted pasa su tiempo libre socializando activamente con un grupo de personas, asistiendo a fiestas, yendo de compras, etc?</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!--Mensajito de ya casi terminamos-->
                 <div data-next-card=".question-17" data-id="16" data-yes="P" data-no="J" class="hide question-16 row d-flex justify-content-center">
                     <div class="col-md-10 col-sm-10 col-xs-12">
                         <div class="card brd-2">
@@ -270,6 +274,7 @@
                                     <p>17</p>
                                 </div>
                                 <div class="m-t-30">
+                                <!--cosas por hacer-->
                                     <h1>¿Disponer de todas tus opciones es más importante que tener una lista preestablecida de cosas que hacer?</h1>
                                 </div>
                             </div>
@@ -284,6 +289,7 @@
                                     <p>18</p>
                                 </div>
                                 <div class="m-t-30">
+                                <!--omitor el no, seguirla -->
                                     <h1>¿No tienes dificultades para diseñar una agenda personal de actividades y adherirte a ella?</h1>
                                 </div>
                             </div>
@@ -298,6 +304,7 @@
                                     <p>19</p>
                                 </div>
                                 <div class="m-t-30">
+                                <!--concluirlas o estaaaa realizarlas-->
                                     <h1>¿Tienes una tendencia a posponer cosas hasta que no queda tiempo suficiente para hacer todo lo que tienes que hacer?</h1>
                                 </div>
                             </div>
@@ -312,32 +319,32 @@
                                     <p>20</p>
                                 </div>
                                 <div class="m-t-30">
-                                    <h1>¿Tienes una tendencia a posponer cosas hasta que no queda tiempo suficiente para hacer todo lo que tienes que hacer?</h1>
+                                    <h1>¿Al considerar una situación usted le presta atención a la situación actual y menos a una posible secuencia de eventos?</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
                 <div class="row d-flex justify-content-center container-buttons">
-                    <div class="col-md-5 col-sm-5 col-xs-5">
+                    <div class="col-md-5 col-sm-6 col-xs-6">
                         <div class="card card-btn-error brd-2">
                             <div class="card-body card-padding d-flex justify-content-center align-items-center">
-                                <img src="<?= base_url('media/iconos/error.svg') ?>" width="50px" alt="Error">
+                                <h3 style="text-align: center">No estoy de acuerdo</h3> 
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5 col-sm-5 col-xs-5">
+                    <div class="col-md-5 col-sm-6 col-xs-6">
                         <div class="card card-btn-success brd-2">
                             <div class="card-body card-padding d-flex justify-content-center align-items-center">
-                                <img src="<?= base_url('media/iconos/success.svg') ?>" width="50px" alt="Error">
+                            <h3 style="text-align: center">Estoy de acuerdo</h3> 
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-
 
 
         <div class="container container-finish m-t-40">
@@ -350,7 +357,7 @@
                                     <p>Tu resultado es: </p>
                                 </div>
                                 <div class="m-t-30 text-center">
-                                    <img class="img" src="https://image.flaticon.com/icons/svg/1256/1256650.svg" width="30%" alt="">
+                                    <img class="img" src="" width="30%" alt="">
                                     <h1 class="title"></h1>
                                     <p class="descripcion"></p>
                                     <small class="character"></small>
@@ -368,8 +375,6 @@
 
     </div>
 
-
-
     <script src="../vendors/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../vendors/bower_components/Waves/dist/waves.min.js"></script>
@@ -385,7 +390,6 @@
             $('.storage-name').html(localStorage.getItem('name') + '<i class="zmdi zmdi-chevron-down zmdi-hc-fw"></i>');
             $('.logo').attr('src', localStorage.getItem('img_perfil'));
 
-
             $('.logout').click(function() {
 
                 FB.getLoginStatus(function(response) {
@@ -396,16 +400,13 @@
                 });
             });
 
-
             window.fbAsyncInit = function() {
-
                 FB.init({
                     appId: '794359310972170',
                     cookie: true, // Enable cookies to allow the server to access the session.
                     xfbml: true, // Parse social plugins on this webpage.
                     version: 'v6.0' // Use this Graph API version for this call.
                 });
-
             };
 
             (function(d, s, id) { // Load the SDK asynchronously
@@ -416,8 +417,6 @@
                 js.src = "https://connect.facebook.net/en_US/sdk.js";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
-
-
 
             $('.container-fluid').fadeIn('slow');
             $('.loader').fadeOut('slow');
@@ -430,8 +429,6 @@
                 let type = element[0].dataset.no;
 
                 if (clase != 'final') {
-
-
                     $('.show').find('.card').css('background-color', '#E24C4B');
                     $('.show').find('p').css('color', 'white');
                     $('.show').find('h1').css('color', 'white');
@@ -441,7 +438,6 @@
 
                         $('.show').addClass('hide');
                         $('.show').removeClass('show');
-
                         //Open next card
                         $(clase).addClass('show');
                         $(clase).removeClass('hide');
@@ -454,9 +450,6 @@
 
                         objeto.push(json);
                         json = {};
-
-
-
                     }, 1000);
 
                 } else {
@@ -468,21 +461,16 @@
                     $('.loader').fadeIn('slow');
 
                     setTimeout(() => {
-
                         $('.loader').fadeOut('slow');
                         $('.container-finish').show();
-
                         let json = {
                             'id_question': id_question,
                             'reply': type
                         }
-
                         objeto.push(json);
                         json = {};
-
                         //console.log(objeto);
                         get_response();
-
                     }, 3000);
                 }
 
@@ -497,34 +485,24 @@
 
                 if (clase != 'final') {
 
-
                     $('.show').find('.card').css('background-color', '#A4D166');
                     $('.show').find('p').css('color', 'white');
                     $('.show').find('h1').css('color', 'white');
                     $('.container-buttons').addClass('hide');
 
-
                     setTimeout(() => {
-
                         $('.show').addClass('hide');
                         $('.show').removeClass('show');
-
                         //Open next card
                         $(clase).addClass('show');
                         $(clase).removeClass('hide');
                         $('.container-buttons').removeClass('hide');
-
-
                         let json = {
                             'id_question': id_question,
                             'reply': type
                         }
-
                         objeto.push(json);
                         json = {};
-
-
-
                     }, 1000);
 
                 } else {
@@ -547,7 +525,6 @@
 
                         objeto.push(json);
                         json = {};
-
                         //console.log(objeto);
                         get_response();
 
@@ -557,10 +534,7 @@
 
             });
 
-
-
             function get_response() {
-
                 $.ajax({
                     type: 'POST',
                     url: url + 'C_home/post',
@@ -572,7 +546,8 @@
                     },
                     dataType: 'json',
                     success: function(result) {
-                        console.log(result); 
+                        //console.log(result); 
+                        $('.img').attr('src', url + 'media/archetype/'+ result.img + '.svg');
                         $('.title').text(result.title);
                         $('.descripcion').text(result.descripcion);
                         $('.character').text('Personajes: '+ result.character);
@@ -583,9 +558,6 @@
                 });
 
             }
-
-
-
 
         });
     </script>
