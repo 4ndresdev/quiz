@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2020 at 10:03 PM
+-- Generation Time: Apr 30, 2020 at 07:13 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -65,7 +65,7 @@ INSERT INTO `cat_archetype` (`archetype`, `name_archetype`, `descripcion`, `char
 
 CREATE TABLE `profile` (
   `id_register` int(11) NOT NULL,
-  `id_profile` int(20) NOT NULL,
+  `id_profile` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` date NOT NULL,
@@ -80,8 +80,20 @@ CREATE TABLE `profile` (
 
 CREATE TABLE `p_a` (
   `id_p_a` int(11) NOT NULL,
-  `id_profile` int(20) NOT NULL,
+  `id_profile` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `archetype` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `references`
+--
+
+CREATE TABLE `references` (
+  `id` int(11) NOT NULL,
+  `id_user` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `id_user_references` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -92,7 +104,7 @@ CREATE TABLE `p_a` (
 
 CREATE TABLE `response` (
   `id_response` int(11) NOT NULL,
-  `id_profile` int(20) NOT NULL,
+  `id_profile` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `q_number` int(11) NOT NULL,
   `value` varchar(10) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -121,6 +133,12 @@ ALTER TABLE `p_a`
   ADD KEY `id_profile` (`id_profile`) USING BTREE;
 
 --
+-- Indexes for table `references`
+--
+ALTER TABLE `references`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `response`
 --
 ALTER TABLE `response`
@@ -141,6 +159,12 @@ ALTER TABLE `profile`
 --
 ALTER TABLE `p_a`
   MODIFY `id_p_a` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `references`
+--
+ALTER TABLE `references`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `response`

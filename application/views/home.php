@@ -5,11 +5,14 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76037200-4"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
 
-	gtag('config', 'UA-76037200-4');
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-76037200-4');
 	</script>
 
 	<meta charset="UTF-8">
@@ -92,7 +95,7 @@
 					<div class="card z-depth-1 card-personal">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
-								<img src="<?= base_url('media/archetype/Arquitecto.svg') ?>" width="150px" height="150px"  alt="arquitecto">
+								<img src="<?= base_url('media/archetype/Arquitecto.svg') ?>" width="150px" height="150px" alt="arquitecto">
 							</div>
 							<p class="bold m-t-25">Arquitecto</p>
 						</div>
@@ -176,7 +179,7 @@
 							<p class="bold m-t-25">Campeón</p>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-3 col-sm-12 col-xs-12">
@@ -198,7 +201,7 @@
 							<p class="bold m-t-25">Director</p>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-3 col-sm-12 col-xs-12">
@@ -210,7 +213,7 @@
 							<p class="bold m-t-25">Cuidador</p>
 						</div>
 					</div>
-				</div> 
+				</div>
 				<div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="card z-depth-1 card-personal">
 						<div class="card-body card-padding">
@@ -220,7 +223,7 @@
 							<p class="bold m-t-25">Artesano</p>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-3 col-sm-12 col-xs-12">
@@ -232,17 +235,18 @@
 							<p class="bold m-t-25">Artista</p>
 						</div>
 					</div>
-				</div> 
+				</div>
 				<div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="card z-depth-1 card-personal">
 						<div class="card-body card-padding">
 							<div class="w-100 d-flex justify-content-center">
 								<img src="<?= base_url('media/archetype/Inspector.svg') ?>" width="150px" height="150px" alt="inspector">
 							</div>
-							<p class="bold m-t-25">Inspector</Inp></p>
+							<p class="bold m-t-25">Inspector</Inp>
+							</p>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-3 col-sm-12 col-xs-12">
@@ -266,7 +270,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</section>
 
 
@@ -337,9 +341,7 @@
 
 			function statusChangeCallback(response) { // Called with the results from FB.getLoginStatus().
 				if (response.status === 'connected') { // Logged into your webpage and Facebook.
-
 					apiGraph(response.authResponse.userID);
-
 				} else { // Not logged into your webpage or we are unable to tell.
 					FB.login(function(response) {
 						if (response.status === 'connected') {
@@ -359,7 +361,6 @@
 				});
 			}
 
-
 			window.fbAsyncInit = function() {
 				FB.init({
 					appId: '794359310972170',
@@ -370,7 +371,6 @@
 
 			};
 
-
 			(function(d, s, id) { // Load the SDK asynchronously
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
@@ -380,8 +380,8 @@
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 
-
 			function apiGraph(userID) {
+
 				FB.api(
 					"/me", {
 						'fields': ['picture', 'name', 'email']
@@ -393,14 +393,36 @@
 							localStorage.setItem('img_perfil', response.picture.data.url);
 							localStorage.setItem('name', response.name);
 							localStorage.setItem('email', response.email);
-							//Into app
-							window.location.href = url + 'C_home/quiz';
 
+							<?php if(isset($_GET['u'])) {?>
+								localStorage.setItem('u', <?= $_GET['u'] ?>);
+							<?php } ?>
+
+							auth(response);
 						}
 					}
 				);
 			}
 
+			function auth(response) {
+
+				console.log(response);
+
+				$.ajax({
+					type: 'POST',
+					url: url + 'C_cuenta/auth',
+					data: {
+						'user_id': response.id
+					},
+					success: function(result) {
+						//Into app
+						window.location.href = url + 'C_home/quiz';
+					},
+					error: function(error) {
+						alert('Nel morro');
+					}
+				});
+			}
 
 		});
 	</script>

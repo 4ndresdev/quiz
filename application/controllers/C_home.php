@@ -12,6 +12,7 @@ class C_home extends CI_Controller
 
 	public function quiz()
 	{
+		
 		$this->load->view('quiz');
 
 	}
@@ -82,7 +83,18 @@ class C_home extends CI_Controller
 				'character'   => $personaje->character
 			];
 
+			if($this->input->post('u')){
+
+				$data_references = [
+					'id_user'            => $this->input->post('id_profile'),
+					'id_user_references' => $this->input->post('u')
+				];
+
+				$this->db->insert('references', $data_references);
+			}
+
 			echo json_encode($response);
+			
 			
 		} else {
 			http_response_code(404);

@@ -229,7 +229,7 @@
                                     <p>14</p>
                                 </div>
                                 <div class="m-t-30">
-                                <!--omitir el no-->
+                                    <!--omitir el no-->
                                     <h1>¿No te lleva mucho tiempo comenzar a implicarte en actividades sociales en tu nuevo entorno de trabajo?</h1>
                                 </div>
                             </div>
@@ -274,7 +274,7 @@
                                     <p>17</p>
                                 </div>
                                 <div class="m-t-30">
-                                <!--cosas por hacer-->
+                                    <!--cosas por hacer-->
                                     <h1>¿Disponer de todas tus opciones es más importante que tener una lista preestablecida de cosas que hacer?</h1>
                                 </div>
                             </div>
@@ -289,7 +289,7 @@
                                     <p>18</p>
                                 </div>
                                 <div class="m-t-30">
-                                <!--omitor el no, seguirla -->
+                                    <!--omitor el no, seguirla -->
                                     <h1>¿No tienes dificultades para diseñar una agenda personal de actividades y adherirte a ella?</h1>
                                 </div>
                             </div>
@@ -304,7 +304,7 @@
                                     <p>19</p>
                                 </div>
                                 <div class="m-t-30">
-                                <!--concluirlas o estaaaa realizarlas-->
+                                    <!--concluirlas o estaaaa realizarlas-->
                                     <h1>¿Tienes una tendencia a posponer cosas hasta que no queda tiempo suficiente para hacer todo lo que tienes que hacer?</h1>
                                 </div>
                             </div>
@@ -331,14 +331,14 @@
                     <div class="col-md-5 col-sm-6 col-xs-6">
                         <div class="card card-btn-error brd-2">
                             <div class="card-body card-padding d-flex justify-content-center align-items-center">
-                                <h3 style="text-align: center">No estoy de acuerdo</h3> 
+                                <h3 style="text-align: center">No estoy de acuerdo</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-5 col-sm-6 col-xs-6">
                         <div class="card card-btn-success brd-2">
                             <div class="card-body card-padding d-flex justify-content-center align-items-center">
-                            <h3 style="text-align: center">Estoy de acuerdo</h3> 
+                                <h3 style="text-align: center">Estoy de acuerdo</h3>
                             </div>
                         </div>
                     </div>
@@ -361,10 +361,9 @@
                                     <h1 class="title"></h1>
                                     <p class="descripcion"></p>
                                     <small class="character"></small>
-                                    
                                 </div>
                                 <div class="p-20 text-center">
-                                    <a href="whatsapp://send?text=Descubre%20tu%20personalidad%20https://959ce69b.ngrok.io/?utm_source=whatsapp">Compartir en whatsapp <i class="zmdi zmdi-arrow-right zmdi-hc-fw"></i> </a>
+                                    <a href="whatsapp://send?text=Descubre%20tu%20personalidad%20https://adb31b29.ngrok.io/?utm_source=whatsapp%26u=<?= $this->session->user_id ?>">Compartir en WhatsApp<i class="zmdi zmdi-arrow-right zmdi-hc-fw"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -386,6 +385,8 @@
 
             let url = '<?= base_url() ?>';
             let objeto = [];
+
+            console.log(localStorage.getItem('user_id'));
 
             $('.storage-name').html(localStorage.getItem('name') + '<i class="zmdi zmdi-chevron-down zmdi-hc-fw"></i>');
             $('.logo').attr('src', localStorage.getItem('img_perfil'));
@@ -535,25 +536,41 @@
             });
 
             function get_response() {
-                $.ajax({
-                    type: 'POST',
-                    url: url + 'C_home/post',
-                    data: {
+
+                let data;
+
+                if (localStorage.getItem('u')) {
+                     data = {
+                        'id_profile': localStorage.getItem('user_id'),
+                        'u': localStorage.getItem('u'),
+                        'name': localStorage.getItem('name'),
+                        'email': localStorage.getItem('email'),
+                        'datos': objeto
+                    }
+                } else {
+                     data = {
                         'id_profile': localStorage.getItem('user_id'),
                         'name': localStorage.getItem('name'),
                         'email': localStorage.getItem('email'),
                         'datos': objeto
-                    },
+                    }
+                }
+
+                console.log(data);
+
+                $.ajax({
+                    type: 'POST',
+                    url: url + 'C_home/post',
+                    data: data,
                     dataType: 'json',
                     success: function(result) {
-                        //console.log(result); 
-                        $('.img').attr('src', url + 'media/archetype/'+ result.img + '.svg');
+
+                        $('.img').attr('src', url + 'media/archetype/' + result.img + '.svg');
                         $('.title').text(result.title);
                         $('.descripcion').text(result.descripcion);
-                        $('.character').text('Personajes: '+ result.character);
+                        $('.character').text('Personajes: ' + result.character);
                     },
-                    error: function(error) {
-                    }
+                    error: function(error) {}
 
                 });
 
