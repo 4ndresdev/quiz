@@ -363,7 +363,7 @@
                                     <small class="character"></small>
                                 </div>
                                 <div class="p-20 text-center">
-                                    <a href="whatsapp://send?text=Descubre%20tu%20personalidad%20https://adb31b29.ngrok.io/?utm_source=whatsapp%26u=<?= $this->session->user_id ?>">Compartir en WhatsApp<i class="zmdi zmdi-arrow-right zmdi-hc-fw"></i> </a>
+                                    <a href="whatsapp://send?text=Descubre%20tu%20personalidad%20https://00fb7a17.ngrok.io/?utm_source=whatsapp%26u=<?= $this->session->user_id ?>">Compartir en WhatsApp<i class="zmdi zmdi-arrow-right zmdi-hc-fw"></i> </a>
                                 </div>
                             </div>
                         </div>
